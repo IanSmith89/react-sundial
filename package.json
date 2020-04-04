@@ -1,0 +1,54 @@
+{
+	"name": "react-sundial",
+	"version": "0.1.0",
+	"description": "A React calendar component.",
+	"author": "Ian Smith",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/IanSmith89/react-sundial.git"
+	},
+	"main": "dist/index.js",
+	"module": "dist/index.modern.js",
+	"source": "src/index.js",
+	"engines": {
+		"node": ">=10"
+	},
+	"scripts": {
+		"build": "microbundle-crl --no-compress --format modern,cjs",
+		"deploy": "gh-pages -d example/build",
+		"predeploy": "cd example && yarn install && yarn run build",
+		"prepublish": "run-s build",
+		"start": "microbundle-crl watch --no-compress --format modern,cjs",
+		"test": "run-s test:unit test:lint test:build",
+		"test:build": "run-s build",
+		"test:lint": "eslint .",
+		"test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+		"test:watch": "react-scripts test --env=jsdom"
+	},
+	"peerDependencies": {
+		"react": "^16.0.0"
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.0.3",
+		"cross-env": "^7.0.2",
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb": "^18.1.0",
+		"eslint-config-prettier": "^6.10.1",
+		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-prettier": "^3.1.2",
+		"eslint-plugin-react": "^7.19.0",
+		"eslint-plugin-react-hooks": "^3.0.0",
+		"gh-pages": "^2.2.0",
+		"microbundle-crl": "^0.13.8",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^1.19.1",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-scripts": "^3.4.1"
+	},
+	"files": [
+		"dist"
+	]
+}
