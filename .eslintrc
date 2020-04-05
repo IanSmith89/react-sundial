@@ -12,15 +12,9 @@
 		}
 	},
 	"plugins": ["react", "react-hooks", "import", "jsx-a11y", "prettier"],
-	"rules": {},
-	"settings": {
-		"import/resolver": {
-			"node": {
-				"extensions": [".js", ".jsx"]
-			}
-		},
-		"react": {
-			"version": "16"
-		}
+	"rules": {
+		"prettier/prettier": "error",
+		"react/prop-types": "off",
+		"react/require-default-props": "off"
 	}
 }
