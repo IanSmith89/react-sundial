@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-sundial/precache-manifest.8d83cd9d50d9db98ae2a5bfe426d6a9b.js"
+  "/react-sundial/precache-manifest.bae64ae085284df45296b2a5faa1dd23.js"
 );
 
 self.addEventListener('message', (event) => {
