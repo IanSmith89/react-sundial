@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => {
 			width: `${menuWidth}`,
 		},
 		mainContent: {
-			padding: theme.spacing(2),
+			padding: theme.spacing(4, 8),
 			transition: `width ${exitTransition}`,
 			width: '100%',
 		},

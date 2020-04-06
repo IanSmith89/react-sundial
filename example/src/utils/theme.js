@@ -10,7 +10,19 @@ export default createMuiTheme({
 	// 		'@media (min-width:600px)': { minHeight: 64 },
 	// 	},
 	// },
-	// overrides: {},
+	overrides: {
+		MuiButton: {
+			root: {
+				padding: '6px 12px',
+			},
+			outlined: {
+				padding: '6px 12px',
+			},
+			label: {
+				textTransform: 'capitalize',
+			},
+		},
+	},
 	palette: {
 		// common: { black: '#000', white: '#fff' },
 		// type: 'light',
