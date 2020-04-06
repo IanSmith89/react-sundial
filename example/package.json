@@ -11,7 +11,9 @@
 		"react-dom": "link:../node_modules/react-dom",
 		"react-router-dom": "link:../node_modules/react-router-dom",
 		"react-scripts": "link:../node_modules/react-scripts",
-		"react-sundial": "link:.."
+		"react-syntax-highlighter": "link:../node_modules/react-syntax-highlighter",
+		"react-sundial": "link:..",
+		"react-transition-group": "link:../node_modules/react-transition-group"
 	},
 	"scripts": {
 		"start": "node ../node_modules/react-scripts/bin/react-scripts.js start",

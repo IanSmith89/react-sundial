@@ -13,29 +13,38 @@ const useStyles = makeStyles(theme => {
 
 	return {
 		pageContainer: {
-			display: 'flex',
+			position: 'relative',
 			width: '100%',
 		},
 		sideMenuContainer: {
 			borderRight: `0.1rem solid ${theme.palette.divider}`,
 			height: 'calc(100vh - 6.4rem)',
+			left: 0,
 			overflow: 'hidden',
+			position: 'fixed',
+			top: '6.4rem',
 			transform: `translate3d(-${menuWidth}, 0, 0)`,
-			transition: `all ${exitTransition}`,
-			width: 0,
+			transition: `transform ${exitTransition}`,
+			width: `${menuWidth}`,
 		},
 		sideMenuVisible: {
 			transform: 'translate3d(0, 0, 0)',
-			transition: `all ${enterTransition},`,
-			width: `${menuWidth}`,
+			transition: `transform ${enterTransition},`,
 		},
 		mainContent: {
-			padding: theme.spacing(4, 8),
-			transition: `width ${exitTransition}`,
+			left: 0,
+			margin: '0 auto',
+			maxWidth: '122.8rem',
+			padding: theme.spacing(4, 8, 8),
+			position: 'absolute',
+			right: 0,
+			top: 0,
+			transition: `all ${exitTransition}`,
 			width: '100%',
 		},
 		mainContentCondensed: {
-			transition: `width ${enterTransition}`,
+			transition: `all ${enterTransition}`,
+			left: menuWidth,
 			width: `calc(100% - ${menuWidth})`,
 		},
 	}
