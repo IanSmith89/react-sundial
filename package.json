@@ -28,10 +28,7 @@
 		"predeploy": "cd example && yarn install && yarn run build",
 		"prepublish": "run-s build",
 		"start": "rollup -c -w",
-		"test": "run-s test:unit test:lint test:build",
-		"test:build": "run-s build",
-		"test:lint": "eslint .",
-		"test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+		"test": "cross-env CI=1 react-scripts test --env=jsdom",
 		"test:watch": "react-scripts test --env=jsdom"
 	},
 	"peerDependencies": {
@@ -42,7 +39,9 @@
 	},
 	"devDependencies": {
 		"@material-ui/core": "^4.9.9",
+		"@material-ui/icons": "^4.9.1",
 		"babel-eslint": "^10.0.3",
+		"clsx": "^1.1.0",
 		"cross-env": "^7.0.2",
 		"eslint": "^6.8.0",
 		"eslint-config-airbnb": "^18.1.0",
@@ -58,6 +57,7 @@
 		"prop-types": "^15.7.2",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
+		"react-router-dom": "^5.1.2",
 		"react-scripts": "^3.4.1",
 		"rollup": "^2.3.3",
 		"rollup-plugin-babel": "^4.4.0",

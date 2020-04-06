@@ -4,8 +4,12 @@
 	"version": "0.0.0",
 	"private": true,
 	"dependencies": {
+		"clsx": "link:../node_modules/clsx",
+		"@material-ui/core": "link:../node_modules/@material-ui/core",
+		"@material-ui/icons": "link:../node_modules/@material-ui/icons",
 		"react": "link:../node_modules/react",
 		"react-dom": "link:../node_modules/react-dom",
+		"react-router-dom": "link:../node_modules/react-router-dom",
 		"react-scripts": "link:../node_modules/react-scripts",
 		"react-sundial": "link:.."
 	},
