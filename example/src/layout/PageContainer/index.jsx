@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
 import { NavigationContext } from '../../contexts/NavigationContext'
 import AppBar from '../AppBar'
+import AppMenu from '../AppMenu'
 
 const menuWidth = '24rem'
 
@@ -18,13 +19,12 @@ const useStyles = makeStyles(theme => {
 		sideMenuContainer: {
 			borderRight: `0.1rem solid ${theme.palette.divider}`,
 			height: 'calc(100vh - 6.4rem)',
-			padding: theme.spacing(2, 0),
+			overflow: 'hidden',
 			transform: `translate3d(-${menuWidth}, 0, 0)`,
 			transition: `all ${exitTransition}`,
 			width: 0,
 		},
 		sideMenuVisible: {
-			padding: theme.spacing(2),
 			transform: 'translate3d(0, 0, 0)',
 			transition: `all ${enterTransition},`,
 			width: `${menuWidth}`,
@@ -54,7 +54,7 @@ const PageContainer = ({ children }) => {
 						[classes.sideMenuVisible]: isAppMenuVisible,
 					})}
 				>
-					side menu
+					<AppMenu />
 				</div>
 				<main
 					className={clsx(classes.mainContent, {
